@@ -18,6 +18,11 @@ export const QuoteGenerator = () => {
    //url api
    const API_URL: string = "https://api.api-ninjas.com/v1/quotes";
 
+   //gunakan useEffect untuk menjalankan fungsi yang merequest API
+   useEffect(() => {
+      fetchQuotes();
+   }, []);
+
    // fungsi untuk mengonsumsi api
    const fetchQuotes = async () => {
       try {
