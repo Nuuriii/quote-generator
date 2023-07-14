@@ -30,9 +30,11 @@ export const QuoteGenerator = () => {
       try {
          const response = await axios.get(API_URL, {
             params: {
+               //untuk menentukan quotes dengan kategori apa yang ingin ditampilkan
                category: CATEGORY,
             },
             headers: {
+               //berfungsi untuk autentikasi API
                "X-Api-Key": `${API_KEY}`,
             },
          });
