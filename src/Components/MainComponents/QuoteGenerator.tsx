@@ -43,15 +43,21 @@ export const QuoteGenerator = () => {
    };
 
    return (
-      <div className='parent'>
+      <div>
          {quote ? (
             <div className='container'>
-               <div>
-                  <h1>Random Quote</h1>
-                  <p>{quote.quote}</p>
-                  <p>{quote.author}</p>
+               <h1>Random Quote</h1>
+               <div className='items-container'>
+                  <div>
+                     <p>{quote.quote}</p>
+                     <p>{quote.author}</p>
+                  </div>
+                  <Buttons
+                     click={fetchQuotes}
+                     className='btn'
+                     text='Get Quote'
+                  />
                </div>
-               <Buttons click={fetchQuotes} className='btn' text='Get Quote' />
             </div>
          ) : (
             <p>Loading . . .</p>
