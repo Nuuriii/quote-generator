@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Buttons } from "./Buttons";
+import { Buttons } from "../Element/Buttons";
 import axios from "axios";
 
 // buat aturan tipe data agar TS tidak merah

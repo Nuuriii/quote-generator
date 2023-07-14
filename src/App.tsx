@@ -1,5 +1,4 @@
-import { QuoteGenerator } from "./Components/QuoteGenerator";
-
+import { QuoteGenerator } from "./Components/MainComponents/QuoteGenerator";
 export const App = () => {
    return (
       <div>
