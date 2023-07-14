@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Buttons } from "./Buttons";
 import axios from "axios";
 
 // buat aturan tipe data agar TS tidak merah
@@ -44,9 +45,12 @@ export const QuoteGenerator = () => {
       <div>
          {quote ? (
             <div>
-               <h1>Random Quote</h1>
-               <p>{quote.quote}</p>
-               <p>{quote.author}</p>
+               <div>
+                  <h1>Random Quote</h1>
+                  <p>{quote.quote}</p>
+                  <p>{quote.author}</p>
+               </div>
+               <Buttons click={fetchQuotes} className='btn' text='Get Quote' />
             </div>
          ) : (
             <p>Loading . . .</p>
