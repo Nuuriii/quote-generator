@@ -55,9 +55,12 @@ export const QuoteGenerator = () => {
                </div>
                <div className='items-container'>
                   <div>
+                     {/*memanggil property API yang bernama quote*/}
                      <p className='items1'>" {quote.quote} "</p>
+                     {/*memanggil property API yang bernama author*/}
                      <p className='items2'>- {quote.author}</p>
                   </div>
+                  {/*tombol unyuk mengganti quote secara acak*/}
                   <Buttons
                      click={fetchQuotes}
                      className='btn'
