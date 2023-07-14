@@ -3,18 +3,77 @@
    display: flex;
    flex-direction: column;
    padding: 0 5px;
+   gap: 20px;
+   align-items: center;
    justify-content: center;
 }
 
-.container > h1 {
+.container > div {
    font-family: "Courier New", Courier, monospace;
-   background-color: white;
+   display: flex;
+   width: 68%;
+   font-size: 88%;
+   align-items: center;
    text-align: center;
-   padding: 10px 20px;
-   color: rgb(74, 123, 212);
+   justify-content: center;
+   background-color: white;
+   padding: 5px 20px;
+   color: rgb(57, 80, 124);
    border-radius: 5px;
+   border: 2px solid rgb(175, 170, 170);
 }
 
 .container > .items-container {
+   padding: 20px 15px;
+   width: 70%;
    background-color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 30px;
+}
+
+.container > .items-container > div {
+   text-align: center;
+   padding: 0 10px;
+   border: 2px solid rgb(168, 166, 166);
+   display: flex;
+   flex-direction: column;
+   border-radius: 5px;
+   justify-content: center;
+   box-shadow: 5px 4px rgb(216, 209, 209);
+}
+
+.container > .items-container > div > .items1 {
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-weight: lighter;
+}
+
+.container > .items-container > div > .items2 {
+   text-align: right;
+   font-weight: bold;
+   display: flex;
+   justify-content: end;
+   color: rgb(66, 5, 116);
+}
+
+.container > .items-container > .btn {
+   border: none;
+   background-color: rgb(2, 13, 27);
+   color: white;
+   border-radius: 5px;
+   padding: 15px 0;
+   font-size: large;
+   font-weight: bold;
+   text-align: center;
+   width: 150px;
+}
+
+.container > .items-container > .btn:hover {
+   background-color: rgb(16, 32, 54);
+}
+
+.container > .items-container > .btn:active {
+   background-color: rgb(80, 94, 114);
 }
