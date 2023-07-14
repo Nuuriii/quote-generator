@@ -41,6 +41,7 @@ export const QuoteGenerator = () => {
          //mengatur kutipan pertama dari respon API ke state quote
          setQuote(response.data[0]);
       } catch (error) {
+         //jika error maka akan dicetak ke console
          console.error("Error:", error);
       }
    };
