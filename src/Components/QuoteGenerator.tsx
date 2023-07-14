@@ -36,14 +36,16 @@ export const QuoteGenerator = () => {
    };
 
    return (
-    <div>
-        {quote ? (
+      <div>
+         {quote ? (
             <div>
-                <h1>Random Quote</h1>
-                <p>{quote.quote}</p>
-                <p>{quote.author}</p>
+               <h1>Random Quote</h1>
+               <p>{quote.quote}</p>
+               <p>{quote.author}</p>
             </div>
-        )}
-    </div>
+         ) : (
+            <p>Loading . . .</p>
+         )}
+      </div>
    );
 };
