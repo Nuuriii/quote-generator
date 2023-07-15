@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Buttons } from "../Element/Buttons";
-import SVG from "./img/Spin-0.5s-74px.svg";
+import SVG from "../../../public/img/Spin-0.5s-74px.svg";
 import "./Quote.css";
 import axios from "axios";
 
@@ -66,9 +66,9 @@ export const QuoteGenerator = () => {
                   <div>
                      {loading && <img src={SVG} />}
                      {/*memanggil property API yang bernama quote*/}
-                     <p className='items1'>" {quote.quote} "</p>
+                     <p className='items1'>{`" ${quote.quote} "`} </p>
                      {/*memanggil property API yang bernama author*/}
-                     <p className='items2'>- {quote.author}</p>
+                     <p className='items2'>{` -${quote.author} `}</p>
                   </div>
                   {/*tombol unyuk mengganti quote secara acak*/}
                   <Buttons
