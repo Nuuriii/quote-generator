@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Buttons } from "../Element/Buttons";
+import SVG from "./img/Spin-0.5s-74px.svg";
 import "./Quote.css";
 import axios from "axios";
 
@@ -12,7 +13,7 @@ interface Quote {
 export const QuoteGenerator = () => {
    const [quote, setQuote] = useState<Quote | null>(null);
 
-   const [loading, setLoading] = useState(false)
+   const [loading, setLoading] = useState(false);
 
    //variable untuk mensetting api request
    //Simpan api key ke variable agar reusable
@@ -29,11 +30,11 @@ export const QuoteGenerator = () => {
 
    // fungsi untuk mengonsumsi api
    const fetchQuotes = async () => {
-      setLoading(true)
+      setLoading(true);
       setQuote({
-         quote: '',
-         author: ''
-      })
+         quote: "",
+         author: "",
+      });
       try {
          const response = await axios.get(API_URL, {
             params: {
@@ -47,12 +48,11 @@ export const QuoteGenerator = () => {
          });
          //mengatur kutipan pertama dari respon API ke state quote
          setQuote(response.data[0]);
-         setLoading(false)
+         setLoading(false);
       } catch (error) {
          //jika error maka akan dicetak ke console
          console.error("Error:", error);
       }
-      
    };
 
    return (
@@ -64,9 +64,7 @@ export const QuoteGenerator = () => {
                </div>
                <div className='items-container'>
                   <div>
-                     {loading &&
-                        <p>Please wait...</p>
-                     }
+                     {loading && <img src={SVG} />}
                      {/*memanggil property API yang bernama quote*/}
                      <p className='items1'>" {quote.quote} "</p>
                      {/*memanggil property API yang bernama author*/}
